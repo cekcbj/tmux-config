@@ -2,13 +2,6 @@
 
 # zsh completion for tmuxinator
 
-# Install:
-# $ mkdir -p ~/.tmuxinator/completion
-# $ cp _tmuxinator ~/.tmuxinator/completion
-# $ vi ~/.zshrc  # add the following codes
-# fpath=($HOME/.tmuxinator/completion ${fpath})
-# autoload -U compinit
-# compinit
 _tmuxinator() {
   local -a projects
   projects=(`find ~/.tmuxinator -name \*.yml | cut -d/ -f5 | sed s:.yml::g`)

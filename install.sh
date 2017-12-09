@@ -29,6 +29,10 @@ link_file() {
 link_file ~/.tmux-config/.tmux.conf ~/.tmux.conf
 
 # link .tmuxinator/default.yml
-link_file ~/.tmux-config/tmuxinator/default.yml ~/.tmuxinator/default.yml
+link_file ~/.tmux-config/.tmuxinator/default.yml ~/.tmuxinator/default.yml
+
+# link .tmuxinator/completion
+mkdir -p ~/.tmuxinator/completion
+link_file ~/.tmux-config/.tmuxinator/completion/_tmuxinator ~/.tmuxinator/completion/_tmuxinator
 
 echo "[STATUS] SUCCESS"
