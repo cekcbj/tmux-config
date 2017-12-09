@@ -1,0 +1,15 @@
+# ~/.tmuxinator/<%= name %>.yml
+
+name: <%= name %>
+root: ~/Work/<%= name %>
+
+pre: mkdir -p ~/Work/<%= name %>; [ -d ~/Work/<%= name %>/.git ] || git clone git@github.com:poetic/<%= name %>.git ~/Work/<%= name %>
+
+windows:
+  - main:
+      layout: main-vertical
+      panes:
+        - vim
+        - c
+        - c
+  - config:
